@@ -1,0 +1,19 @@
+import java.awt.Color;
+
+public class ColorfulBall extends Ball {
+
+    private Color[] ballColors = {Color.red, Color.blue, Color.black, Color.green, Color.cyan, Color.magenta};
+    private int colorNum;
+
+    public ColorfulBall(int x, int y, int d, int xMove, int yMove) {
+        super(x, y, d, xMove, yMove, Color.red);
+        colorNum = 0;
+    }
+
+    @Override
+    public void move(int width, int height) {
+        colorNum++;
+        setColor(ballColors[colorNum % ballColors.length]); 
+        super.move(width, height);
+    }
+}
