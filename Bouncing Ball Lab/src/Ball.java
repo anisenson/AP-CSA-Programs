@@ -71,11 +71,11 @@ public class Ball
      // bounce off wall according to law of elastic collision
         if (Math.abs(xLoc + xStep) + radius > width) {
             xStep = -xStep;
-            StdAudio.play("pong.wav");
+            StdAudio.play("boing_poing.wav");
         }
         if (Math.abs(yLoc + yStep) + radius > height)  {
             yStep = -yStep;
-            StdAudio.play("pong.wav");
+            StdAudio.play("boing_poing.wav");
         }
         
         xLoc += xStep; //move the location of ball
