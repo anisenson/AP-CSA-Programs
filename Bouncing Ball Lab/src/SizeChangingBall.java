@@ -31,14 +31,5 @@ public class SizeChangingBall extends Ball {
 
 
 
-    //Subclass 1
-    public void drawBall() {
-        int x = getX();
-        int y = getY();
-        int size = getDiam();
-        
-        // Draw a square
-        StdDraw.setPenColor(getColor());
-        StdDraw.filledSquare(x, y, size / 2);
-    }
+
 }

@@ -6,19 +6,18 @@ public class BouncingBalls {
     private Ball[] balls;
     private int width, height;
 
-    public BouncingBalls(int w, int h)
-    {
+    public BouncingBalls(int w, int h) {
         width = w;
         height = h;
-        balls = new Ball[3]; 
-        balls[0] = new Ball(50,50,Color.RED);
-        balls[1] = new ColorfulBall(10,10,20,5,8);
-        balls[2] = new SizeChangingBall(200, 200, Color.CYAN, 50);
-
-     
-
-
+        balls = new Ball[6]; 
+        balls[0] = new Ball(50, 50, Color.RED);
+        balls[1] = new ColorfulBall(10, 10, 20, 5, 8);
+        balls[2] = new SizeChangingBall(200, 200, Color.ORANGE, 50);
+        balls[3] = new SquareBall(200, 200, 20, Color.YELLOW ); //subclass 1
+        balls[4] = new AdaptiveBall(0, 0, 20, 4, 5, Color.GREEN); //subclass 2
+        balls[5] = new CircularBall(0, 0, 20, Color.BLUE); //subclass 3
     }
+    
 
 
     public void moveBalls()
@@ -48,7 +47,7 @@ public class BouncingBalls {
 
             // display and pause for 50 ms
             StdDraw.show();
-            StdDraw.pause(50); // this controls speed
+            StdDraw.pause(10); // this controls speed
             court.moveBalls();
             // set the background to light gray to erase
             StdDraw.clear(StdDraw.LIGHT_GRAY); //set every pixel
