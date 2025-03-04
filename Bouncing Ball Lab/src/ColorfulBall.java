@@ -9,8 +9,6 @@ public class ColorfulBall extends Ball {
         super(x, y, d, xMove, yMove, Color.red);
         colorNum = 0;
     }
-
-    @Override
     public void move(int width, int height) {
         colorNum++;
         setColor(ballColors[colorNum % ballColors.length]); 
