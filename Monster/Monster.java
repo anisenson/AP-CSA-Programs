@@ -7,7 +7,7 @@ public class Monster {
     private int health;
     private int attackPower;
 
-    private static int totalMonsters = 0;
+    private static int totalMonsters = -1;
 
     public Monster(String name, int health, int attackPower) {
         this.name = name;
